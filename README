@@ -1,0 +1,14 @@
+Inside code folder:
+
+1> Create virtualenv and install requirements:
+  virtualenv .
+  . bin/activate
+  pip install -r requirements.txt
+
+2> Create database:
+  createdb -T template_postgis cartonama
+  (If you do not have a postgis template, refer: https://docs.djangoproject.com/en/dev/ref/contrib/gis/install/#creating-a-spatial-database-template-for-postgis)
+
+3> Syncdb and run local testing server:
+  python manage.py syncdb
+  python manage.py runserver
